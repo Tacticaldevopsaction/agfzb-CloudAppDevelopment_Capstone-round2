@@ -73,14 +73,14 @@ def registration_request(request):
     context = {}
     # If it is a GET request, just render the registration page
     if request.method == 'GET':
-        return render(request, 'djangoapp/registration.html', context)
+        return render(request, 'djangoapp/user_registration.html', context)
     # If it is a POST request
     elif request.method == 'POST':
         # Get user information from request.POST
         username = request.POST['username']
-        password = request.POST['pword']
-        first_name = request.POST['fname']
-        last_name = request.POST['lname']
+        password = request.POST['psw']
+        first_name = request.POST['firstname']
+        last_name = request.POST['lastname']
         user_exist = False
         try:
             # Check if user already exists
@@ -99,7 +99,7 @@ def registration_request(request):
             return redirect("djangoapp:index")
         else:
             context["message"]="Account could not be created try again."
-            return render(request, 'djangoapp/registration.html', context)
+            return render(request, 'djangoapp/user_registration.html', context)
 # Update the `get_dealerships` view to render the index page with a list of dealerships
 def get_dealerships(request):
     context = {}
