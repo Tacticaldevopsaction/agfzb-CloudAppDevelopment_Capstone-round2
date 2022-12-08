@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dealership Review</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -15,17 +15,19 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <div class="navbar-header">
-              <a class="navbar-brand" href="#">Online Course</a>
+              <a class="navbar-brand" href="#">Contact</a>
         </div>
     </div>
 </nav>
-    <body>
-    <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
-    <!--Add a nav bar here -->
-
-    <!--Add a dealer table here jr-->
-
-    </body>
-
-</html>
+<div class="container">
+    <h3>About Us</h3>
+    <p><em class="text-uppercase">Welcome</em> to Best Cars Dealership, home to the best cars in North America. We Sell Domestic and Imported Cars at Reasonable Prices.</P>
+    </div>
+</body>
+<footer class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark">
+    <div class="container">
+      <a class="btn btn-sm btn-outline-info" type="button" href="{% url 'djangoapp:about' %}">About Us</a>
+      <a class="btn btn-sm btn-outline-info" type="button" href="{% url 'djangoapp:contact' %}">Contact Us</a>
+      © 2022 Jeronimo, Inc. Terms Privacy
+    </div>
+</footer>
